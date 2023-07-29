@@ -18,7 +18,7 @@
     <div id="app" class="h-100 container bg-white px-0 d-flex flex-column">
       <nav class="navbar navbar-expand-md lovebility-navbar navbar-light border-bottom-red px-3">
         <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="images/home/logo.svg">
+        <img src="/images/home/logo.svg">
         </a>
       <div class="d-none d-md-block">
         <a class="text-decoration-none  pe-3" href="{{ route('tests.index') }}">
