@@ -39,7 +39,11 @@ class QuestionCreate extends React.Component {
         ) : null}
         <div className="row justify-content-center mt-5">
           <div className="col-lg-6">
-            <p className="pb-4 border-bottom border-danger border-2">Вывод: {this.state.text}</p>
+            <p className="pb-4 border-bottom border-danger border-2">Вывод:
+              <div
+                 dangerouslySetInnerHTML={{__html: this.state.text}}>
+              </div>
+            </p>
             <h5>Интересные факты</h5>
             {this.state.facts.map((fact, index) => (
               <p className="fact-show" key={index}>{fact.content}</p>
