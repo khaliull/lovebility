@@ -22,12 +22,12 @@ Route::get('/articles/{title}', [App\Http\Controllers\HomeController::class, 'ar
 
 Route::get('/tests/categories', [App\Http\Controllers\TestController::class, 'index'])->name('tests.index');
 Route::get('/tests/categories/{category}', [App\Http\Controllers\TestController::class, 'testCategories'])->name('tests.category');
-Route::get('/tests/categories/{category}/show/{key}', [App\Http\Controllers\TestController::class, 'testShow'])->name('test.show');
-Route::post('/test/{key}/get-questions', [App\Http\Controllers\TestController::class, 'testGetQuestions']);
-Route::post('/test/{key}/send-question', [App\Http\Controllers\TestController::class, 'testSendQuestions']);
-Route::post('/test/{key}/complete-test', [App\Http\Controllers\TestController::class, 'testCompleted']);
-Route::get('/test/{key}/last-question/{question}', [App\Http\Controllers\TestController::class, 'lastQuestion']);
-Route::post('/test/{key}/paired-test/{pairedTestKey}', [App\Http\Controllers\TestController::class, 'pairedTestKey']);
+Route::get('/tests/categories/{category}/show/{key}', [App\Http\Controllers\TestController::class, 'testShow'])->name('test.show')->middleware('auth');;
+Route::post('/test/{key}/get-questions', [App\Http\Controllers\TestController::class, 'testGetQuestions'])->middleware('auth');
+Route::post('/test/{key}/send-question', [App\Http\Controllers\TestController::class, 'testSendQuestions'])->middleware('auth');
+Route::post('/test/{key}/complete-test', [App\Http\Controllers\TestController::class, 'testCompleted'])->middleware('auth');
+Route::get('/test/{key}/last-question/{question}', [App\Http\Controllers\TestController::class, 'lastQuestion'])->middleware('auth');
+Route::post('/test/{key}/paired-test/{pairedTestKey}', [App\Http\Controllers\TestController::class, 'pairedTestKey'])->middleware('auth');
 
 Route::get('/test/paired-test', [App\Http\Controllers\TestController::class, 'pairedTest'])->name('test.paired_test');
 

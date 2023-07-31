@@ -10,7 +10,7 @@
         <div class="card-body">
           <div class="">
             <h4 class="card-title">{{$article->title}}</h4>
-            <p class="fw-light">{{$article->content}}</p>
+            <p class="fw-light">{!! $article->content !!}</p>
           </div>
         </div>
         <div class="d-flex justify-content-between pe-4">

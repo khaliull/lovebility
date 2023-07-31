@@ -13,11 +13,6 @@ use Illuminate\Support\Str;
 
 class TestController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         $categories = Category::all();
@@ -32,6 +27,11 @@ class TestController extends Controller
     {
 
         $pairedTest = PairedTest::where('key', $request->key)->whereNull('second_user_id')->first();
+
+        if (!auth()->user()) {
+           $request->session()->flash('pairedTestVerification', 'Для подключения к тесту по ключу необходимо авторизоваться');
+           return redirect()->back();
+        }
 
         if (!$pairedTest) {
            $request->session()->flash('pairedTestVerification', 'Тест с таким ключом приглашения не найден');
