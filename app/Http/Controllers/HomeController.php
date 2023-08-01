@@ -38,15 +38,15 @@ class HomeController extends Controller
         ]);
     }
 
-    public function articlesShow($title)
+    public function articlesShow($slug)
     {
 
-        $article = Article::where('title', $title)->latest()->first();
+        $article = Article::where('slug', $slug)->latest()->first();
 
         abort_unless($article, 404);
 
         return view('articles.show', [
-          'title' => $title,
+          'title' => $article->title,
           'article' => $article
         ]);
     }

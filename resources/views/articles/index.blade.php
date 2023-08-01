@@ -6,7 +6,7 @@
     <div class="col-lg-7 mb-5">
       <h1 class="h2 text-center mb-4">Последние новости сервиса</h1>
       @foreach($articles as $article)
-      <a href="{{ route('articles.show', ['title' => $article->title]) }}" class="card article-card mb-3 text-decoration-none text-body">
+      <a href="{{ route('articles.show', ['title' => $article->slug]) }}" class="card article-card mb-3 text-decoration-none text-body">
         <div class="card-body">
           <div class="">
             <h4 class="card-title">{{$article->title}}</h4>
