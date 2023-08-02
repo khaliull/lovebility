@@ -76,10 +76,6 @@ class ResultTestController extends Controller
               $newText = 'Ожидание результатов партнера';
             }
 
-
-
-
-
             $array = [
               'name' => $question->position + 1,
               'firstUser' => $firstUser->answer,
@@ -150,7 +146,7 @@ class ResultTestController extends Controller
         // code...
       }
 
-    
+
 
         return view('tests.results.test', [
           'title' => 'Результаты прохождения тестa',

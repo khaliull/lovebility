@@ -3,15 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
-    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <body class="bg-body h-100">
@@ -32,12 +28,7 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav me-auto">
-          </ul>
-          <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ms-auto">
-            <!-- Authentication Links -->
             @guest
             @if (Route::has('login'))
             <li class="nav-item">
@@ -138,9 +129,7 @@
         @yield('content')
       </main>
       <footer class="lovebility-footer border-top-red mt-auto">
-
           <div class="container lovebility-footer-social text-center p-3 pb-0">
-            <!-- Section: Social media -->
             <section class="pb-3">
               <a class="btn btn-floating m-1 vk" href="#!" role="button"><img class="w-100 h-100" src="/images/social/vk.svg"></a>
               <a class="btn btn-floating m-1 telegram" href="#!" role="button"><img class="w-100 h-100" src="/images/social/telegram.svg"></a>
@@ -150,8 +139,23 @@
           <div class="text-center p-3 lovebility-footer-block text-white">
             © 2023 lovebility.ru
           </div>
-          <!-- Copyright -->
         </footer>
     </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(94509553, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/94509553" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
   </body>
 </html>
