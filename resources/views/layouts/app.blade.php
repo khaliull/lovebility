@@ -9,6 +9,8 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
   </head>
   <body class="bg-body h-100">
     <div id="app" class="h-100 container bg-white px-0 d-flex flex-column">
@@ -157,7 +159,5 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/94509553" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
   </body>
 </html>
