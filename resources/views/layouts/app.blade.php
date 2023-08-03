@@ -12,6 +12,7 @@
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
   </head>
+  
   <body class="bg-body h-100">
     <div id="app" class="h-100 container bg-white px-0 d-flex flex-column">
       <nav class="navbar navbar-expand-md lovebility-navbar navbar-light border-bottom-red px-3">
