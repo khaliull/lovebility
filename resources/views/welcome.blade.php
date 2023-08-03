@@ -15,6 +15,7 @@
     </div>
   </div>
 </div>
+
 <div class="container py-5">
   <h2 class="text-center">Хочешь больше узнать о человеке?</h2>
   <p class="text-center mb-5">Наш сервис поможет тебе в этом!</p>
