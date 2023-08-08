@@ -6,13 +6,7 @@ use Illuminate\Http\Request;
 
 class SitemapController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function __invoke()
+    public function sitemap()
     {
         $contents = file_get_contents(resource_path('views/sitemap.xml'));
 
