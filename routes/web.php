@@ -34,7 +34,7 @@ Route::get('/test/paired-test', [App\Http\Controllers\TestController::class, 'pa
 Route::get('/test/results', [App\Http\Controllers\ResultTestController::class, 'index'])->name('results.index');
 Route::get('/test/{key}/results/{passedTest}', [App\Http\Controllers\ResultTestController::class, 'test'])->name('results.test');
 
-Route::get('/sitemap.xml', [SitemapController::class, 'sitemap'])->name('sitemap');
+Route::get('/sitemap.xml', [App\Http\Controllers\SitemapController::class, 'sitemap'])->name('sitemap');
 
 Route::get('/admin', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
 Route::get('/admin/test/category-create', [App\Http\Controllers\Admin\TestController::class, 'createCategoryIndex']);
