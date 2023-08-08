@@ -68,7 +68,7 @@
     </div>
   </div>
 </div>
-<div class="container border-top border-bottom border-danger border-3 py-4">
+<div class="container border-top border-bottom border-danger border-3 py-4 mb-3">
   <h2 class="text-center mb-4">Интересные факты</h2>
   <div class="row justify-content-center">
     <div class="col-lg-6">

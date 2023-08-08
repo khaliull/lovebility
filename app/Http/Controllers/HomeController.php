@@ -23,7 +23,8 @@ class HomeController extends Controller
         $facts = Fact::select('facts.content')->inRandomOrder()->limit(3)->get();
 
         return view('welcome', [
-          'title' => 'Главная',
+          'title' => 'Прохождение совместных тестов lovebility',
+          'metaDescription' => 'Прохождение совместных тестов lovebility',
           'facts' => $facts,
         ]);
     }
@@ -33,7 +34,7 @@ class HomeController extends Controller
         $articles = Article::where('status', 1)->latest()->get();
 
         return view('articles.index', [
-          'title' => 'Последние новости сервиса',
+          'title' => 'Последние новости сервиса lovebility',
           'articles' => $articles
         ]);
     }
