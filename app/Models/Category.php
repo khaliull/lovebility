@@ -14,7 +14,7 @@ class Category extends Model
     ];
 
     protected $fillable = [
-        'title', 'data'
+        'title', 'data', 'slug'
     ];
 
     public function tests()

@@ -36,7 +36,8 @@ class TestController extends Controller
           'title' => 'required|string|max:255',
           'data' => 'required',
         ]);
-
+        $data['slug'] = Str::slug($data['title'], '-', null);
+        
         $category = Category::create($data);
 
         return redirect()->back();

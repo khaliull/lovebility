@@ -18,7 +18,7 @@ class TestController extends Controller
         $categories = Category::all();
 
         return view('tests.index', [
-          'title' => 'Прохождение тестов, все виды тестов',
+          'title' => 'Пройти тесты онлайн: тесты на совместимость, логические, IQ, психологические',
           'categories' => $categories,
         ]);
     }
@@ -48,31 +48,35 @@ class TestController extends Controller
         $test = Test::where('id', $pairedTest['test_id'])->first();
 
         return view('tests.show', [
-          'title' => 'Прохождение теста',
+          'title' => 'Прохождение тестов на совместимость',
           'test' => $test,
           'pairedTestKeyShow' => $request->key
         ]);
     }
 
-    public function testCategories(Category $category)
+    public function testCategories($slug)
     {
+        $category = Category::where('slug', $slug)->firstOrFail();
+
         $tests = Test::where('active', 1)->where('category_id', $category->id)->get();
 
         return view('tests.category', [
-          'title' => 'Прохождение тестов, все виды тестов',
+          'title' => 'Прохождение онлайн тестов, все категории тестов',
           'tests' => $tests,
           'category' => $category,
         ]);
     }
 
-    public function testShow($category, $key)
+    public function testShow($slug, $key)
     {
+        $category = Category::where('slug', $slug)->firstOrFail();
+
         $test = Test::where('key', $key)->first();
 
         abort_unless($test, 404);
 
         return view('tests.show', [
-          'title' => 'Прохождение теста',
+          'title' => 'Прохождение теста ' . $test->name,
           'test' => $test,
           'pairedTestKeyShow' => null
         ]);

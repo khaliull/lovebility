@@ -43,7 +43,7 @@
         @isset($tests)
         @foreach($tests as $test)
         <div class="col-6 align-items-center mb-3">
-          <a href="{{ route('test.show', ['category' => $category->title, 'key' => $test->key]) }}" class="test-link">
+          <a href="{{ route('test.show', ['category' => $category->slug, 'key' => $test->key]) }}" class="test-link">
             <div class="test-card">
               <div class="card-body">
                 <h5 class="text-center mb-0">{{$test->name}}</h5>

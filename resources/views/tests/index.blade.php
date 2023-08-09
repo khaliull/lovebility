@@ -5,7 +5,7 @@
   <div class="container pt-lg-5 pt-4 pb-5">
     <div class="row align-items-center justify-content-end">
       <div class="col-12">
-        <h1 class="fw-light text-center mb-5">Выбор тестов для прохождения</h1>
+        <h1 class="fw-light text-center mb-5">Выбор теста для прохождения</h1>
         <p class="mb-1">Прохождение тестов может помочь лучше понять свои знания, способности, интересы и личностные качества, что может быть полезным для личного и профессионального развития.</p>
         <div class="test-invited-block">
           <p class="fw-bold mb-0">Вас пригласили?</p>
@@ -31,10 +31,10 @@
         <h3 class="text-center mb-5">Тематика тестов</h3>
         @foreach($categories as $category)
         <div class="col-6 align-items-center mb-3">
-          <a href="{{ route('tests.category', ['category' => $category->id]) }}" class="test-link">
+          <a href="{{ route('tests.category', ['category' => $category->slug]) }}" class="test-link">
             <div class="test-card">
               <div class="card-body">
-                <h5 class="ps-md-4 mb-0">{{$category->title}}</h5>
+                <h2 class="ps-md-4 h5 mb-0">{{$category->title}}</h2>
               </div>
             </div>
           </a>

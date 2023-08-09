@@ -9,7 +9,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
     @isset($metaKeywords)
     <meta name="keywords" content="{{ $metaKeywords }}">
     @endisset
@@ -29,10 +29,10 @@
         </a>
       <div class="d-none d-md-block">
         <a class="text-decoration-none  pe-3" href="{{ route('tests.index') }}">
-          Все виды тестов
+          Категория тестов
         </a>
         <a class="text-decoration-none" href="{{ route('articles') }}">
-          Актуальные статьи
+          Последние новости
         </a>
       </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
